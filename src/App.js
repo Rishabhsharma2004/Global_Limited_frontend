@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import LoginPage from './pages/LoginPage';
+import UserListPage from './pages/UserListPage';
+import EditUserPage from './pages/EditUserPage';
+import Footer from '../src/components/footer'; // Ensure the import matches your file structure
+import HomePage from '../src/components/home';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <Routes>
+          <Route path='/' element={<HomePage/>}/>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/users" element={<UserListPage />} />
+            <Route path="/edit/:id" element={<EditUserPage />} />
+          </Routes>
+          <Footer /> {/* This ensures the footer is displayed on all pages */}
+        </div>
+      </Router>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
