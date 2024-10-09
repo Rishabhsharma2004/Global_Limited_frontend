@@ -117,20 +117,6 @@ Delete User details.
 [https://global-limited.onrender.com/users/{id}](https://global-limited.onrender.com/users)
   
 
-* Request Body
-```bash
-{
-  "email":"tester@gmail.com",
-    "password":"tester1"
-}
-```
-* Response Body
-```bash
-{
-    "message": "User deleted successfully",
-    "success": true
-}
-```
 
 ..................................................................................................................................................
 
