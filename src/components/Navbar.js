@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <a href="/" className="text-gray-300 hover:text-white">Home</a>
           <a href="/users" className="text-gray-300 hover:text-white">Users</a>
-          <a href="/settings" className="text-gray-300 hover:text-white">Settings</a>
+          <a href="/login" className="text-gray-300 hover:text-white">Login</a>
           <button onClick={logout} className="text-red-500 hover:text-red-400">Logout</button>
         </div>
         <div className="md:hidden">

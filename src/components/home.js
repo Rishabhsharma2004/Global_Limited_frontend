@@ -3,15 +3,15 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white text-black">
       {/* Hero Section */}
-      <header className="bg-blue-600 text-white py-20">
+      <header className=" text-black py-20">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold mb-4">Welcome to User Management</h1>
           <p className="text-xl mb-6">
             A powerful tool to manage your users efficiently.
           </p>
-          <a href="/users" className="bg-white text-blue-600 py-2 px-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-200">
+          <a href="/users" className="bg-gray-400 text-blue-600 py-2 px-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-200">
             Get Started
           </a>
         </div>
@@ -43,7 +43,7 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className=" text-white py-16">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
           <p className="mb-6">Become a part of our growing user management community and start managing your users like a pro!</p>

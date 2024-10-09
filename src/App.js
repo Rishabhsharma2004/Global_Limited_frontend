@@ -5,7 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import LoginPage from './pages/LoginPage';
 import UserListPage from './pages/UserListPage';
 import EditUserPage from './pages/EditUserPage';
-import Footer from '../src/components/footer'; // Ensure the import matches your file structure
+import Footer from '../src/components/footer';
 import HomePage from '../src/components/home';
 const App = () => {
   return (
