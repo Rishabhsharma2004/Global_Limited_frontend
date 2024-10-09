@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# User Management .. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application serves as the frontend for managing user data. It provides endpoints to handle Create, Update Retrieve and Delete operations on submission data.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ * React.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ * Tailwind Css
 
-### `npm test`
+ * Restfull API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ * npm (Node Package Manager)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ * React.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ * npm (Node Package Manager)
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get the project up and running, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the Repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  git clone https://github.com/Rishabhsharma2004/Global_Limited_frontend.git
+  cd assignentg
+```
+2. Install dependencies:
+```bash
+ npm install
+```
+3. Run the server:
+```bash
+ npm start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+...........................................................
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### GET / login
 
-### Making a Progressive Web App
+Login to the account.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Parameters
+* email 
+* password
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[https://global-limited.onrender.com/login](https://global-limited.onrender.com/login)
 
-### Deployment
+  * Request Body
+```bash
+{
+  "email":"eve.holt@reqres.in",
+    "password":" cityslicka"
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+* Response Body
+```bash
+{
+    "token": "QpwL5tke4Pnpja7X4"
+}
+```
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### PUT / update
+
+
+Parameters
+* first name  (optional)
+* last name  (optional)
+* email  (mandatory)
+
+
+
+[https://global-limited.onrender.com/users/{id}](https://global-limited.onrender.com/users)
+
+
+* Request Body
+```bash
+{
+ 
+    "email":"tester@gmail.com",
+    "first_name":"Tester Rename",
+    "last_name":"Tester Rename",
+
+}
+```
+* Response Body
+```bash
+{
+    "name": "morpheus",
+    "job": "zion resident",
+    "updatedAt": "2024-10-09T05:11:59.841Z"
+}
+```
+
+..................................................................................................................................................
+
+#### DELETE / delete
+
+Delete User details.
+
+
+[https://global-limited.onrender.com/users/{id}](https://global-limited.onrender.com/users)
+  
+
+* Request Body
+```bash
+{
+  "email":"tester@gmail.com",
+    "password":"tester1"
+}
+```
+* Response Body
+```bash
+{
+    "message": "User deleted successfully",
+    "success": true
+}
+```
+
+..................................................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+* All the links are of deployment version
+
+ 
+*  Error Handling : 
+   Errors are returned with appropriate HTTP status codes and messages.
